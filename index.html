@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexaBot — AI Asistan Hizmetleri</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){ emailjs.init({publicKey:'xF59W89TBVdNDXPn5'}); })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});" style="cursor:pointer">Nexa<span>Bot</span></div>
+  <ul class="nav-links">
+    <li><a href="#nasil-calisir" onclick="scrollTo_('#nasil-calisir');return false;">Nasıl Çalışır</a></li>
+    <li><a href="#ozellikler" onclick="scrollTo_('#ozellikler');return false;">Özellikler</a></li>
+    <li><a href="#sektorler" onclick="scrollTo_('#sektorler');return false;">Sektörler</a></li>
+    <li><a href="#paketler" onclick="scrollTo_('#paketler');return false;">Paketler</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openModal()">Ücretsiz Demo</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-badge">🟢 Canlı Demo Hazır — Şimdi Deneyin</div>
+  <h1>Müşterilerinize<br><em>Anında</em> Cevap Verin<br>Siz Uyurken</h1>
+  <p class="hero-sub">Sesli arama, WhatsApp ve web sohbeti — hepsi tek bir AI asistan. Rezervasyon alır, soruları yanıtlar, temsilciye bağlar.</p>
+  <div class="hero-actions">
+    <button class="btn-primary" onclick="openModal()">Ücretsiz Demo İste</button>
+    <button class="btn-secondary" onclick="openChat()">🤖 Canlı Demo Dene</button>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><span class="stat-num">%94</span><div class="stat-label">Soruları Çözdü</div></div>
+    <div class="stat-item"><span class="stat-num">7/24</span><div class="stat-label">Kesintisiz Aktif</div></div>
+    <div class="stat-item"><span class="stat-num">3dk</span><div class="stat-label">Kurulum Süresi</div></div>
+    <div class="stat-item"><span class="stat-num">€0</span><div class="stat-label">İlk Hafta</div></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="nasil-calisir" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-label">Süreç</div>
+    <h2 class="section-title">Tam Otomasyona 4 Adımda Geçin</h2>
+    <p class="section-body">İşletmenize özel AI asistanınız, markanızın sesiyle konuşur.</p>
+    <div class="how-grid reveal">
+      <div class="how-step"><div class="step-num">01</div><div class="step-icon">📞</div><div class="step-title">Müşteri Ulaşır</div><div class="step-desc">Telefon, WhatsApp ya da web chat — hangi kanaldan gelirse gelsin, AI saniyeler içinde yanıt verir.</div></div>
+      <div class="how-step"><div class="step-num">02</div><div class="step-icon">🧠</div><div class="step-title">AI Anlar ve Yanıtlar</div><div class="step-desc">İşletmenize özel eğitilmiş asistanınız soruları çözer, rezervasyon alır, fiyat bilgisi verir.</div></div>
+      <div class="how-step"><div class="step-num">03</div><div class="step-icon">📬</div><div class="step-title">İşletme Bilgilenir</div><div class="step-desc">Her rezervasyon anında e-posta/SMS ile iletilir. Karmaşık durumlar canlı temsilciye aktarılır.</div></div>
+      <div class="how-step"><div class="step-num">04</div><div class="step-icon">📈</div><div class="step-title">Siz Büyürsünüz</div><div class="step-desc">Kaçırılan çağrı = kaçırılan müşteri. NexaBot hiç yorulmaz, hiç kaçırmaz, her zaman kibardır.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="ozellikler">
+  <div class="container">
+    <div class="section-label">Özellikler</div>
+    <h2 class="section-title">Her Kanalda, Her An</h2>
+    <p class="section-body">Üç güçlü kanal, tek yönetim paneli.</p>
+    <div class="features-wrap reveal">
+      <div class="feat-card accent">
+        <div class="feat-tag">Sesli AI</div>
+        <div class="feat-title">Telefon Asistanı</div>
+        <div class="feat-desc">Gelen aramalara doğal sesle cevap verir. Rezervasyon alır, yönlendirme yapar, gerektiğinde gerçek kişiye bağlar.</div>
+        <ul class="feat-list"><li>Doğal Türkçe konuşma</li><li>Mesai dışı otomatik yanıt</li><li>Canlı temsilciye aktarım</li><li>Arama kaydı ve transkript</li></ul>
+      </div>
+      <div class="feat-card">
+        <div class="feat-tag">WhatsApp Bot</div>
+        <div class="feat-title">WhatsApp Asistanı</div>
+        <div class="feat-desc">Müşterileriniz WhatsApp'tan yazınca anında yanıt alır. Menü, fiyat, randevu — hepsi otomatik.</div>
+        <ul class="feat-list"><li>Otomatik menü ve katalog</li><li>Anında rezervasyon onayı</li><li>Görsel ve belge paylaşımı</li><li>Toplu bildirim gönderimi</li></ul>
+      </div>
+      <div class="feat-card">
+        <div class="feat-tag">Web Chat</div>
+        <div class="feat-title">Sitenize Entegre Sohbet</div>
+        <div class="feat-desc">Web sitenize eklenen chat widgeti ile ziyaretçileri anında müşteriye dönüştürün.</div>
+        <ul class="feat-list"><li>5 dakikada kurulum</li><li>Markanızın renk & logosu</li><li>Ziyaretçi takibi</li><li>Lead toplama</li></ul>
+      </div>
+      <div class="feat-card">
+        <div class="feat-tag">Rezervasyon</div>
+        <div class="feat-title">Akıllı Rezervasyon Sistemi</div>
+        <div class="feat-desc">Müşteri saati seçer, AI takvimi kontrol eder, onaylar ve size bildirir.</div>
+        <ul class="feat-list"><li>Gerçek zamanlı müsaitlik</li><li>Otomatik hatırlatma SMS</li><li>İptal ve yeniden planlama</li><li>Google Calendar sync</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sektorler" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-label">Sektörler</div>
+    <h2 class="section-title">Her İşletme İçin Uygun</h2>
+    <p class="section-body">Sektörünüze özel eğitilmiş AI asistanlar.</p>
+    <div class="sectors-row reveal">
+      <div class="sector-pill" onclick="openChatSector('restoran')"><span>🍽️</span> Restoran & Kafe</div>
+      <div class="sector-pill" onclick="openChatSector('guzellik')"><span>💅</span> Güzellik & SPA</div>
+      <div class="sector-pill" onclick="openChatSector('klinik')"><span>🦷</span> Klinik & Diş Hekimi</div>
+      <div class="sector-pill" onclick="openChatSector('otel')"><span>🏨</span> Otel & Konaklama</div>
+      <div class="sector-pill" onclick="openChatSector('fitness')"><span>💪</span> Fitness & Spor</div>
+      <div class="sector-pill" onclick="openChatSector('servis')"><span>🔧</span> Teknik Servis</div>
+      <div class="sector-pill" onclick="openChatSector('egitim')"><span>📚</span> Eğitim & Kurs</div>
+      <div class="sector-pill" onclick="openChatSector('emlak')"><span>🏠</span> Emlak</div>
+      <div class="sector-pill" onclick="openChatSector('oto')"><span>🚗</span> Oto Servis</div>
+      <div class="sector-pill" onclick="openChatSector('avukat')"><span>⚖️</span> Avukatlık & Muhasebe</div>
+    </div>
+    <p style="color:var(--muted);font-size:0.85rem;margin-top:20px">👆 Bir sektöre tıklayın — o sektör için hazırlanmış demo botu deneyin</p>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="paketler">
+  <div class="container">
+    <div class="section-label">Fiyatlandırma</div>
+    <h2 class="section-title">Şeffaf, Sabit Aylık Ücret</h2>
+    <p class="section-body">Gizli ücret yok. İstediğiniz zaman iptal. İlk hafta ücretsiz.</p>
+    <div class="packages-grid reveal">
+      <div class="pkg-card">
+        <div class="pkg-name">Chatbot</div>
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:6px">Web chat + WhatsApp asistanı</p>
+        <div class="pkg-price"><sup>€</sup>299</div>
+        <div class="pkg-period">/ ay · aylık fatura</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-items">
+          <li><span class="check">✓</span> Web chat widget</li>
+          <li><span class="check">✓</span> WhatsApp asistanı</li>
+          <li><span class="check">✓</span> Akıllı rezervasyon</li>
+          <li><span class="check">✓</span> E-posta bildirimleri</li>
+          <li><span class="check">✓</span> Google Takvim sync</li>
+          <li><span class="check">✓</span> 500 mesaj/ay</li>
+          <li><span class="x">✕</span> Sesli AI arama</li>
+          <li><span class="x">✕</span> Web sitesi tasarımı</li>
+        </ul>
+        <button class="pkg-btn pkg-btn-outline" onclick="openModalPkg('Chatbot €299/ay')">Başlayın</button>
+      </div>
+      <div class="pkg-card featured">
+        <div class="pkg-badge">En Popüler</div>
+        <div class="pkg-name">Voice Chatbot</div>
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:6px">Chatbot + sesli AI arama</p>
+        <div class="pkg-price"><sup>€</sup>499</div>
+        <div class="pkg-period">/ ay · aylık fatura</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-items">
+          <li><span class="check">✓</span> Web chat widget</li>
+          <li><span class="check">✓</span> WhatsApp asistanı</li>
+          <li><span class="check">✓</span> 📞 Sesli AI arama</li>
+          <li><span class="check">✓</span> Akıllı rezervasyon</li>
+          <li><span class="check">✓</span> SMS bildirimleri</li>
+          <li><span class="check">✓</span> 2.000 mesaj/ay</li>
+          <li><span class="check">✓</span> Öncelikli destek</li>
+          <li><span class="x">✕</span> Web sitesi tasarımı</li>
+        </ul>
+        <button class="pkg-btn pkg-btn-solid" onclick="openModalPkg('Voice Chatbot €499/ay')">Hemen Başlayın</button>
+      </div>
+      <div class="pkg-card">
+        <div class="pkg-name">Website</div>
+        <p style="font-size:0.85rem;color:var(--muted);margin-top:6px">Tam çözüm + özel web sitesi</p>
+        <div class="pkg-price"><sup>€</sup>799</div>
+        <div class="pkg-period">/ ay · aylık fatura</div>
+        <div class="pkg-divider"></div>
+        <ul class="pkg-items">
+          <li><span class="check">✓</span> Özel web sitesi tasarımı</li>
+          <li><span class="check">✓</span> Web chat widget</li>
+          <li><span class="check">✓</span> WhatsApp asistanı</li>
+          <li><span class="check">✓</span> 📞 Sesli AI arama</li>
+          <li><span class="check">✓</span> Sınırsız mesaj</li>
+          <li><span class="check">✓</span> 7/24 öncelikli destek</li>
+          <li><span class="check">✓</span> Özel entegrasyonlar</li>
+          <li><span class="check">✓</span> SEO optimizasyonu</li>
+        </ul>
+        <button class="pkg-btn pkg-btn-outline" onclick="openModalPkg('Website €799/ay')">Başlayın</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--surface)">
+  <div class="container">
+    <div class="section-label">Referanslar</div>
+    <h2 class="section-title">İşletmeler Neler Diyor</h2>
+    <div class="testimonials-grid reveal">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Artık mesai dışında kaçırdığımız aramaları düşünmüyoruz. Bot randevu alıyor, sabah uyandığımızda dolu bir takvim buluyoruz."</p><div class="testi-author"><div class="testi-avatar">💇</div><div><div class="testi-name">Selin K.</div><div class="testi-role">Güzellik Salonu Sahibi</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"WhatsApp'tan gelen masa rezervasyonları tamamen otomatik. Personelim sadece mutfağa ve servise odaklanıyor."</p><div class="testi-author"><div class="testi-avatar">🍽️</div><div><div class="testi-name">Mehmet A.</div><div class="testi-role">Restoran İşletmecisi</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Hastalar gece 2'de randevu alabiliyorlar. Sabah klinik açıldığında tüm program hazır. Müthiş bir çözüm."</p><div class="testi-author"><div class="testi-avatar">🦷</div><div><div class="testi-name">Dr. Ayşe T.</div><div class="testi-role">Diş Kliniği</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="iletisim">
+  <div class="container" style="position:relative">
+    <div class="section-label" style="color:var(--gold)">Ücretsiz Demo</div>
+    <h2 class="cta-title">30 Dakikada İşletmenize<br>Özel Demo Hazırlayalım</h2>
+    <p class="cta-sub">Kredi kartı gerekmez. İlk hafta tamamen ücretsiz.</p>
+    <div class="cta-form">
+      <input class="cta-input" id="ctaName" type="text" placeholder="Adınız & işletme adı" />
+      <input class="cta-input" id="ctaPhone" type="tel" placeholder="WhatsApp numaranız" />
+      <button class="cta-submit" onclick="submitCtaForm()">Demo İste →</button>
+    </div>
+    <div id="ctaSuccess" style="display:none;margin-top:20px;color:var(--green);font-size:1rem">✅ Teşekkürler! 24 saat içinde sizi arayacağız.</div>
+    <p style="font-size:0.78rem;color:var(--muted);margin-top:16px">24 saat içinde sizinle iletişime geçiyoruz.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">NexaBot</div>
+  <div class="footer-copy">© 2025 NexaBot. Tüm hakları saklıdır.</div>
+  <div style="font-size:0.83rem;color:var(--muted)">info@nexabot.com</div>
+</footer>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal-overlay" id="demoModal" onclick="closeModalOutside(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalForm">
+      <div class="modal-title">Ücretsiz Demo İste</div>
+      <p class="modal-sub" id="modalSubText">30 dakikada işletmenize özel demo hazırlıyoruz. Kredi kartı gerekmez.</p>
+      <div class="form-group">
+        <label class="form-label">Adınız</label>
+        <input class="form-input" id="mName" type="text" placeholder="Ad Soyad" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">İşletme Adı</label>
+        <input class="form-input" id="mBusiness" type="text" placeholder="Restoran, Klinik, Otel..." />
+      </div>
+      <div class="form-group">
+        <label class="form-label">WhatsApp Numarası</label>
+        <input class="form-input" id="mPhone" type="tel" placeholder="+90 5XX XXX XX XX" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Sektörünüz</label>
+        <select class="form-input form-select" id="mSector">
+          <option value="">Seçiniz...</option>
+          <option>Restoran & Kafe</option>
+          <option>Güzellik & SPA</option>
+          <option>Klinik & Diş Hekimi</option>
+          <option>Otel & Konaklama</option>
+          <option>Fitness & Spor</option>
+          <option>Teknik Servis</option>
+          <option>Eğitim & Kurs</option>
+          <option>Emlak</option>
+          <option>Diğer</option>
+        </select>
+      </div>
+      <button class="form-submit" onclick="submitModal()">Demo Talep Gönder →</button>
+    </div>
+    <div class="form-success" id="modalSuccess">
+      <div class="success-icon">🎉</div>
+      <h3>Talebiniz Alındı!</h3>
+      <p>En geç 24 saat içinde WhatsApp'tan sizi arayacağız ve işletmenize özel demoyu birlikte hazırlayacağız.</p>
+      <button class="form-submit" style="margin-top:20px" onclick="closeModal()">Tamam</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CHAT WIDGET ===================== -->
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-avatar">🤖</div>
+    <div class="chat-header-info">
+      <h4>NexaBot Demo</h4>
+      <div class="chat-status">Aktif — Canlı AI</div>
+    </div>
+    <div class="chat-header-sector">
+      <select class="sector-select-mini" id="sectorSelect" onchange="changeSector()">
+        <option value="genel">🌐 Genel</option>
+        <option value="restoran">🍽️ Restoran</option>
+        <option value="guzellik">💅 Güzellik</option>
+        <option value="klinik">🦷 Klinik</option>
+        <option value="otel">🏨 Otel</option>
+        <option value="fitness">💪 Fitness</option>
+      </select>
+    </div>
+  </div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-quick-replies" id="quickReplies"></div>
+  <div class="chat-input-area">
+    <input class="chat-input" id="chatInput" placeholder="Mesajınızı yazın..." onkeydown="handleChatKey(event)" />
+    <button class="chat-send" id="sendBtn" onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<button class="chat-fab" id="chatFab" onclick="toggleChat()">
+  <span id="fabIcon">💬</span>
+  <div class="chat-notif" id="chatNotif">1</div>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
